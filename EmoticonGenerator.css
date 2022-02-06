@@ -1,0 +1,29 @@
+/* Standardised font settings for various elements */
+body, button, input, p, select, textarea {
+    font-family: "Calibri";
+    font-size: 110%;
+}
+
+body {
+    background-color: #ae75ff;
+    margin-left: 25%;
+}
+
+/* Standardised widths for various elements */
+input[type="text"], p, textarea, .wideButton {
+    width: 50%;
+}
+
+textarea {
+    height: 10em;
+}
+
+.closeButton {
+    background-color: #ff7575;
+    border-color: #ff7575;
+}
+
+.copyButton {
+    background-color: #7ff3ff;
+    border-color: #7ff3ff;
+}

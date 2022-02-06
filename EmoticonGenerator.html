@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Emoticon Generator :P</title>
+        <link rel="stylesheet" href="EmoticonGenerator.css" type="text/css">
+    </head>
+    <body>
+        <script src="EmoticonGenerator.js"></script>
+        <script>
+            window.addEventListener('load', function() {
+                displayAllEmoticons();
+                getScrabbleLetterDistributions();
+            })
+            
+            // Copies input from a text box and stores it in the clipboard.
+            function copyText(textboxId) {
+                let element = document.getElementById(textboxId);
+                element.select();
+                // If this is done on a mobile device, use setSelectionRange as well.
+                element.setSelectionRange(0, element.value.length);
+                document.execCommand("copy");
+            }
+        </script>
+        
+        <p>
+            <h1>All Emoticons</h1>
+            <textarea id="allEmoticons" rows="5" cols="50"></textarea>
+            <br/>
+            <button class="copyButton" onclick="copyText('allEmoticons')">Copy</button>
+        </p>
+        <p>
+            <h1>All characters used to create the generated emoticons</h1>
+            <input type="text" id="allChars">
+            <br/>
+            <button class="copyButton" onclick="copyText('allChars')">Copy</button>
+        </p>
+        <p>
+            <h1>Tile distributions</h1>
+            <textarea id="distributedTiles" rows="5" cols="50"></textarea>
+            <br/>
+            <button class="copyButton" onclick="copyText('distributedTiles')">Copy</button>
+        </p>
+        <p>
+            <h1>Score distributions</h1>
+            <textarea id="distributedScores" rows="5" cols="50"></textarea>
+            <br/>
+            <button class="copyButton" onclick="copyText('distributedScores')">Copy</button>
+        </p>
+        
+        <button class="wideButton closeButton" onclick="window.close()">Close</button>
+        
+    </body>
